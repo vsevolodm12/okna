@@ -37,11 +37,11 @@
     }
 
     .progress-bar {
-      height: 6px;
+      height: 4px;
       background-color: var(--border);
-      border-radius: 3px;
+      border-radius: 2px;
       overflow: hidden;
-      margin: 16px 0;
+      margin: 16px 0 8px 0;
     }
 
     .progress-fill {
@@ -49,6 +49,14 @@
       width: 37.5%; /* 3 из 8 шагов */
       background-color: var(--primary);
       transition: width 0.3s ease;
+    }
+
+    .step-info {
+      font-size: 14px;
+      color: var(--text-muted);
+      text-align: center;
+      margin-bottom: 16px;
+      opacity: 0.7;
     }
 
     .card {
@@ -82,24 +90,11 @@
       overflow: hidden;
     }
 
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(135deg, #e9ebef, #f3f4f6);
-      z-index: 1;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      font-size: 24px;
-      color: var(--text-muted);
-      opacity: 0.6;
-      text-align: center;
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 16px;
     }
 
     .rules {
@@ -195,26 +190,27 @@
     <div class="progress-fill"></div>
   </div>
 
+  <!-- Информация о шаге -->
+  <div class="step-info">3 из 8</div>
+
   <div class="card">
     <h1>Шаг 2. Замер ширины проёма (из комнаты)</h1>
 
-    <!-- Иллюстрация (заглушка) -->
+    <!-- Иллюстрация -->
     <div class="hero">
-      <div class="hero-content">Иллюстрация окна</div>
+      <img src="/okna/assets/img/02-width.WebP?v=1" alt="Замер ширины проёма">
     </div>
 
     <!-- Правила -->
     <ul class="rules">
-      <li>Поставьте «крючок» рулетки в жёсткий внутренний угол <strong>левого откоса</strong> (не на наличник).</li>
-      <li>Протяните рулетку <strong>до жёсткой плоскости правого откоса</strong>.</li>
-      <li>Сделайте <strong>три замера</strong>: <strong>вверху</strong>, <strong>по центру</strong>, <strong>внизу</strong>. Запишите.</li>
+      <li>Тяните рулетку по прямой <strong>между внутренними плоскостями левого и правого откосов</strong>. Удобно мерить <strong>над подоконником</strong>.</li>
     </ul>
 
     <!-- Подсказки -->
     <div style="background: #f9f9f9; border-radius: 12px; padding: 16px; margin: 20px 0; text-align: left; font-size: 14px; color: var(--text-muted);">
       <strong>Подсказки:</strong>
       <ul style="margin-top: 8px; padding-left: 20px;">
-        <li>Если откосы не идеально параллельны, именно поэтому нужны три точки.</li>
+        <li>Если откосы не идеально параллельны, замерьте ширину проема <strong>в 3 разных точках</strong>. (начало, центр, верх) Для итога возьмите минимальный размер.</li>
         <li>Если мешает подоконник, тяните рулетку <strong>над</strong> подоконником, от стены до стены.</li>
       </ul>
     </div>
