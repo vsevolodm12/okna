@@ -37,11 +37,11 @@
     }
 
     .progress-bar {
-      height: 6px;
+      height: 4px;
       background-color: var(--border);
-      border-radius: 3px;
+      border-radius: 2px;
       overflow: hidden;
-      margin: 16px 0;
+      margin: 16px 0 8px 0;
     }
 
     .progress-fill {
@@ -49,6 +49,14 @@
       width: 75%; /* 6 из 8 шагов */
       background-color: var(--primary);
       transition: width 0.3s ease;
+    }
+
+    .step-info {
+      font-size: 14px;
+      color: var(--text-muted);
+      text-align: center;
+      margin-bottom: 16px;
+      opacity: 0.7;
     }
 
     .card {
@@ -82,24 +90,11 @@
       overflow: hidden;
     }
 
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(135deg, #e9ebef, #f3f4f6);
-      z-index: 1;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      font-size: 24px;
-      color: var(--text-muted);
-      opacity: 0.6;
-      text-align: center;
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 16px;
     }
 
     .rules {
@@ -195,19 +190,21 @@
     <div class="progress-fill"></div>
   </div>
 
+  <!-- Информация о шаге -->
+  <div class="step-info">Шаг 6 из 8</div>
+
   <div class="card">
     <h1>Шаг 5. Длина/высота откосов (насколько они тянутся вдоль проёма)</h1>
 
-    <!-- Иллюстрация (заглушка) -->
+    <!-- Иллюстрация -->
     <div class="hero">
-      <div class="hero-content">Иллюстрация окна</div>
+      <img src="/okna/assets/img/05-reveal-length.WebP?v=1" alt="Длина/высота откосов">
     </div>
 
     <!-- Правила -->
     <ul class="rules">
-      <li><strong>Левый/правый:</strong> от <strong>низа проёма у рамы</strong> (у стыка с подоконной частью) до <strong>верха</strong> (где откос встречается с верхним).</li>
-      <li><strong>Верхний:</strong> по <strong>ширине</strong> — от <strong>левого</strong> угла до <strong>правого</strong> угла над рамой.</li>
-      <li>Меряйте <strong>по плоскости откоса</strong>, не по краю подоконника/наличнику.</li>
+      <li><strong>Левый / Правый откос:</strong> от <strong>низа у рамы</strong> до <strong>стыка с верхним откосом</strong>.</li>
+      <li><strong>Верхний откос:</strong> от <strong>левого угла</strong> до <strong>правого угла</strong> над рамой.</li>
     </ul>
 
     <!-- Навигация -->
