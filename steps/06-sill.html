@@ -37,11 +37,11 @@
     }
 
     .progress-bar {
-      height: 6px;
+      height: 4px;
       background-color: var(--border);
-      border-radius: 3px;
+      border-radius: 2px;
       overflow: hidden;
-      margin: 16px 0;
+      margin: 16px 0 8px 0;
     }
 
     .progress-fill {
@@ -49,6 +49,14 @@
       width: 87.5%; /* 7 из 8 шагов */
       background-color: var(--primary);
       transition: width 0.3s ease;
+    }
+
+    .step-info {
+      font-size: 14px;
+      color: var(--text-muted);
+      text-align: center;
+      margin-bottom: 16px;
+      opacity: 0.7;
     }
 
     .card {
@@ -82,24 +90,11 @@
       overflow: hidden;
     }
 
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(135deg, #e9ebef, #f3f4f6);
-      z-index: 1;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      font-size: 24px;
-      color: var(--text-muted);
-      opacity: 0.6;
-      text-align: center;
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 16px;
     }
 
     .rules {
@@ -195,23 +190,21 @@
     <div class="progress-fill"></div>
   </div>
 
+  <!-- Информация о шаге -->
+  <div class="step-info">Шаг 7 из 8</div>
+
   <div class="card">
-    <h1>Шаг 6. Подоконник: что и как мерять</h1>
+    <h1>Шаг 6. Подоконник (внутри)</h1>
 
-    <!-- Иллюстрация (заглушка) -->
+    <!-- Иллюстрация -->
     <div class="hero">
-      <div class="hero-content">Иллюстрация окна</div>
-    </div>
-
-    <!-- Описание -->
-    <div style="margin: 20px 0; text-align: left; font-size: 16px;">
-      <p><strong>Что такое подоконник:</strong> внутренняя «полка» под окном.</p>
+      <img src="/okna/assets/img/06-sill.WebP?v=1" alt="Подоконник">
     </div>
 
     <!-- Правила -->
     <ul class="rules">
-      <li><strong>Длина:</strong> по стене <strong>от левого до правого откоса</strong> (не по переднему краю, а у стены, где подоконник подходит к откосам).</li>
-      <li><strong>Глубина (вылет):</strong> от <strong>стыка у рамы</strong> до <strong>переднего края</strong> подоконника по перпендикуляру.</li>
+      <li><strong>Длина:</strong> по стене <strong>от левого до правого откоса</strong></li>
+      <li><strong>Глубина:</strong> от <strong>стыка у рамы</strong> до <strong>переднего края</strong> подоконника по перпендикуляру.</li>
     </ul>
 
     <!-- Навигация -->
