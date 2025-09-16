@@ -37,11 +37,11 @@
     }
 
     .progress-bar {
-      height: 6px;
+      height: 4px;
       background-color: var(--border);
-      border-radius: 3px;
+      border-radius: 2px;
       overflow: hidden;
-      margin: 16px 0;
+      margin: 16px 0 8px 0;
     }
 
     .progress-fill {
@@ -49,6 +49,14 @@
       width: 62.5%; /* 5 из 8 шагов */
       background-color: var(--primary);
       transition: width 0.3s ease;
+    }
+
+    .step-info {
+      font-size: 14px;
+      color: var(--text-muted);
+      text-align: center;
+      margin-bottom: 16px;
+      opacity: 0.7;
     }
 
     .card {
@@ -82,24 +90,11 @@
       overflow: hidden;
     }
 
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(135deg, #e9ebef, #f3f4f6);
-      z-index: 1;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      font-size: 24px;
-      color: var(--text-muted);
-      opacity: 0.6;
-      text-align: center;
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 16px;
     }
 
     .rules {
@@ -195,19 +190,20 @@
     <div class="progress-fill"></div>
   </div>
 
+  <!-- Информация о шаге -->
+  <div class="step-info">Шаг 5 из 8</div>
+
   <div class="card">
     <h1>Шаг 4. Глубина откосов (на сколько откос уходит в комнату)</h1>
 
-    <!-- Иллюстрация (заглушка) -->
+    <!-- Иллюстрация -->
     <div class="hero">
-      <div class="hero-content">Иллюстрация окна</div>
+      <img src="/okna/assets/img/04-reveal-depth.WebP?v=1" alt="Глубина откосов">
     </div>
 
     <!-- Правила -->
     <ul class="rules">
-      <li>Прижмите «0» рулетки к <strong>плоскости рамы</strong>.</li>
-      <li>Тяните рулетку <strong>перпендикулярно</strong> до <strong>плоскости стены</strong> — это и есть глубина.</li>
-      <li>Замерьте <strong>слева, сверху, справа</strong>. Если откос неровный — сделайте 2–3 замера и берите <strong>минимальный</strong>.</li>
+      <li>Это «насколько окно утоплено». Приложите «0» к <strong>раме</strong> и тяните <strong>перпендикулярно до стены</strong>. Выберите ровное место.</li>
     </ul>
 
     <!-- Навигация -->
