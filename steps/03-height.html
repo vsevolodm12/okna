@@ -37,11 +37,11 @@
     }
 
     .progress-bar {
-      height: 6px;
+      height: 4px;
       background-color: var(--border);
-      border-radius: 3px;
+      border-radius: 2px;
       overflow: hidden;
-      margin: 16px 0;
+      margin: 16px 0 8px 0;
     }
 
     .progress-fill {
@@ -49,6 +49,14 @@
       width: 50%; /* 4 из 8 шагов */
       background-color: var(--primary);
       transition: width 0.3s ease;
+    }
+
+    .step-info {
+      font-size: 14px;
+      color: var(--text-muted);
+      text-align: center;
+      margin-bottom: 16px;
+      opacity: 0.7;
     }
 
     .card {
@@ -82,24 +90,11 @@
       overflow: hidden;
     }
 
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(135deg, #e9ebef, #f3f4f6);
-      z-index: 1;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      font-size: 24px;
-      color: var(--text-muted);
-      opacity: 0.6;
-      text-align: center;
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 16px;
     }
 
     .rules {
@@ -195,19 +190,20 @@
     <div class="progress-fill"></div>
   </div>
 
+  <!-- Информация о шаге -->
+  <div class="step-info">Шаг 4 из 8</div>
+
   <div class="card">
     <h1>Шаг 3. Замер высоты проёма (из комнаты)</h1>
 
-    <!-- Иллюстрация (заглушка) -->
+    <!-- Иллюстрация -->
     <div class="hero">
-      <div class="hero-content">Иллюстрация окна</div>
+      <img src="/okna/assets/img/03-height.WebP?v=1" alt="Замер высоты проёма">
     </div>
 
     <!-- Правила -->
     <ul class="rules">
-      <li>Уприте ноль рулетки в <strong>верхний откос</strong>.</li>
-      <li>Опустите рулетку до <strong>стыка под рамой</strong> (за подоконником, у стены).</li>
-      <li>Сделайте <strong>три замера</strong>: <strong>слева</strong>, <strong>по центру</strong>, <strong>справа</strong>. Запишите.</li>
+      <li>От <strong>верхнего откоса</strong> опустите рулетку до <strong>места, где рама упирается в стену</strong> (за подоконником).</li>
     </ul>
 
     <!-- Навигация -->
