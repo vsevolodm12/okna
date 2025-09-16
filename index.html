@@ -37,11 +37,11 @@
     }
 
     .progress-bar {
-      height: 6px;
+      height: 4px;
       background-color: var(--border);
-      border-radius: 3px;
+      border-radius: 2px;
       overflow: hidden;
-      margin: 16px 0;
+      margin: 16px 0 8px 0;
     }
 
     .progress-fill {
@@ -49,6 +49,14 @@
       width: 12.5%; /* 1 из 8 шагов */
       background-color: var(--primary);
       transition: width 0.3s ease;
+    }
+
+    .step-info {
+      font-size: 14px;
+      color: var(--text-muted);
+      text-align: center;
+      margin-bottom: 16px;
+      opacity: 0.7;
     }
 
     .card {
@@ -182,19 +190,21 @@
     <div class="progress-fill"></div>
   </div>
 
+  <!-- Информация о шаге -->
+  <div class="step-info">Шаг 1 из 8</div>
+
   <div class="card">
     <h1>Правила перед началом</h1>
 
     <!-- Иллюстрация -->
-  <div class="hero">
-    <img src="/okna/assets/img/01-type.WebP?v=1" alt="Определение типа проёма">
-  </div>
-
+    <div class="hero">
+      <img src="/okna/assets/img/01-type.WebP?v=1" alt="Определение типа проёма">
+    </div>
 
     <!-- Правила -->
     <ul class="rules">
-      <li>Все размеры <strong>в миллиметрах (мм)</strong>. Металлическая рулетка, твёрдый край.</li>
-      <li>Почти везде делаем <strong>по 3 замера</strong> (вверху/середина/внизу или слева/центр/справа) — дальше ориентируемся на <strong>самое маленькое</strong> значение.</li>
+      <li>Все размеры — <strong>в миллиметрах</strong>.</li>
+      <li>Меряйте по <strong>твёрдым плоскостям</strong>: стена↔стена, рама↔стена.</li>
     </ul>
 
     <!-- Навигация -->
